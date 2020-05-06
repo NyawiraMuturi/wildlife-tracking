@@ -16,7 +16,7 @@ public class App {
             model.put("animals", Animal.all());
             model.put("endangeredAnimals", EndangeredAnimal.all());
             model.put("sightings", Sighting.all());
-            model.put("template", "templates/index.vtl");
+            model.put("template", "templates/sighting.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
