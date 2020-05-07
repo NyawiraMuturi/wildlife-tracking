@@ -3,27 +3,39 @@
 <h1>Add Animal to Database</h1>
 
 <form action="/animal/new" method="post">
-  <label>Animal Species</label>
-  <input type="text" name="name">
-  <label>Endangered?</label>
-  <input type="checkbox" name="endangered">
+    <div class="container">
+      <label for="name">Animal</label>
+      <input type="text" name="name" id="name">
+      <label>Endangered?</label>
+      <input type="checkbox" name="endangered" id="endangered">
+    </div>
 
   <h3>Additional Info for Endangered Animals:</h3>
 
-  <label>Health</label>
-  <select name="health">
-    <option>Ill</option>
-    <option>Okay</option>
-    <option>Healthy</option>
-  </select>
+        <div class="select">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Condition</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="Sick">Sick</option>
+            <option value="Okay">Okay</option>
+            <option value="Healthy">Healthy</option>
+          </select>
+        </div>
 
-  <label>Age</label>
-  <select name="age">
-    <option>Newborn</option>
-    <option>Young</option>
-    <option>Adult</option>
-  </select>
+        <div class="select">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Animal Age</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="New Born">New Born</option>
+            <option value="Young"> Young</option>
+            <option value="Adult"> Adult </option>
+          </select>
+        </div>
 
-  <button type="submit">Add Animal</button>
+  <button type="submit" class="btn btn-dark">Add Animal</button>
 
 </form>
